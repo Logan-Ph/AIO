@@ -17,7 +17,7 @@ train_datagen = ImageDataGenerator(
 #target size is the size of each image
 #bath size is the number of image in 1 batch which is passes into an epoch
 training_set = train_datagen.flow_from_directory(
-    "C:\\Users\\phamp\\code\\github\\code\\Section 40 - Convolutional Neural Networks (CNN)\\dataset\\training_set",
+    "C:\\Users\\Admin\\code\\Section 40-Convolutional_Neural_Networks(CNN)\\dataset\\training_set",
     target_size = (64,64),
     batch_size = 32,
     class_mode='binary'
@@ -26,7 +26,7 @@ training_set = train_datagen.flow_from_directory(
 #preprocessing the testing set
 test_datagen = ImageDataGenerator(rescale = 1./255)
 test_set = test_datagen.flow_from_directory(
-    "Section 40 - Convolutional Neural Networks (CNN)\\dataset\\test_set",
+    "C:\\Users\\Admin\\code\\Section 40-Convolutional_Neural_Networks(CNN)\\dataset\\test_set",
     target_size = (64,64),
     batch_size = 32,
     class_mode = 'binary'
@@ -65,7 +65,7 @@ cnn.compile(optimizer="adam",loss='binary_crossentropy',metrics = ['accuracy'])
 cnn.fit(x=training_set, validation_data = test_set, epochs=15 )
 
 #-------------------------Making the single-prediction-------------------------
-test_image = tf.keras.utils.load_img("Section 40 - Convolutional Neural Networks (CNN)\\dataset\\single_prediction\\cat_or_dog_1.jpg", target_size = (64,64))
+test_image = tf.keras.utils.load_img("C:\\Users\\Admin\\code\\Section 40-Convolutional_Neural_Networks(CNN)\\dataset\\single_prediction\\cat_or_dog_2.jpg", target_size = (64,64))
 
 #change the format of the image to the 2D array
 test_image = tf.keras.utils.img_to_array(test_image)

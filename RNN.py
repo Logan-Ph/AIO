@@ -8,7 +8,7 @@ from keras.layers import LSTM
 from keras.layers import Dropout
 
 #-------------------------Data Preprocessing-------------------------
-dataset_train = pd.read_csv("C:\\Users\\phamp\\code\\github\\code\\Part 3 - Recurrent Neural Networks\\Google_Stock_Price_Train.csv")
+dataset_train = pd.read_csv("C:\\Users\\Admin\\code\\Part 3-Recurrent_Neural_Networks\\Google_Stock_Price_Train.csv")
 
 training_set = dataset_train.iloc[:,1:2].values
 
@@ -62,7 +62,7 @@ regressor.fit(x_train,y_train,epochs = 100, batch_size=32)
 
 #-------------------------Making prediction and visualising the result-------------------------
 
-dataset_test = pd.read_csv("C:\\Users\\phamp\\code\\github\\code\\Part 3 - Recurrent Neural Networks\\Google_Stock_Price_Test.csv")
+dataset_test = pd.read_csv("C:\\Users\\Admin\\code\\Part 3-Recurrent_Neural_Networks\\Google_Stock_Price_Test.csv")
 
 real_stock_price = dataset_test.iloc[:,1:2].values
 
