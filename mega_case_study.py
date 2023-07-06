@@ -9,7 +9,7 @@ from keras.layers import Dense
 from sklearn.preprocessing import StandardScaler
 
 #---------------data preprocessing---------------
-dataset = pd.read_csv("C:\\Users\\phamp\\code\\github\\code\\Credit_Card_Applications.csv")
+dataset = pd.read_csv("C:\\Users\\Admin\\code\\Self_Organizing_Maps\\Credit_Card_Applications.csv")
 
 X = dataset.iloc[:,:-1].values
 y = dataset.iloc[:,-1].values
