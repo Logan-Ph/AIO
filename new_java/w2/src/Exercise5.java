@@ -2,12 +2,12 @@ import java.util.*;
 public class Exercise5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.printf("Enter circle1's center x-, y-coordinates, and radius: ");
+        System.out.print("Enter circle1's center x-, y-coordinates, and radius: ");
         double c1X = Double.parseDouble(input.next());
         double c1Y = Double.parseDouble(input.next());
         double c1R = Double.parseDouble(input.next());
 
-        System.out.printf("Enter circle2's center x-, y-coordinates, and radius: ");
+        System.out.print("Enter circle2's center x-, y-coordinates, and radius: ");
         double c2X = Double.parseDouble(input.next());
         double c2Y = Double.parseDouble(input.next());
         double c2R = Double.parseDouble(input.next());

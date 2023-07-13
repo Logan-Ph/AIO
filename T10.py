@@ -1,16 +1,12 @@
-import math
-
-
-class Circle:
-    def __init__(self, radius: int):
-        self.radius = radius
-
-    def getArea(self):
-        print(math.pi * self.radius ** 2)
-
-    def getPerimeter(self):
-        print(2 * math.pi * self.radius)
-
-
-circy = Circle(11)
-circy.getArea()
+s = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+string  = input()
+a = ""
+for i in range(26):
+    for st in string:
+        if st in s:
+            idx = s.index(st)-i
+            a+= s[idx]
+    print(i)
+    print(a)
+    a = ""    
+        
