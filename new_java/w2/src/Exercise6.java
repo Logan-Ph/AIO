@@ -1,7 +1,6 @@
 import java.util.*;
 public class Exercise6 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         Random random = new Random();
         HashMap<Integer,Integer> freq = new HashMap<>();
 
