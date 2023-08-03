@@ -4,6 +4,7 @@ public class Exercise2345 {
     public static void main(String[] args) {
        Scanner input = new Scanner(System.in);
         System.out.println(Arrays.toString(sortBySelection(new int[] {3,2,4,1,2,5,5,7,8})));
+        String str = new String("asdf");
     }
 
     static int getIndexMin(int[] numbers){
@@ -18,6 +19,7 @@ public class Exercise2345 {
         }
         return idx;
     }
+
 
     static int getIndexMinForm(int[] numbers, int form){
         int[] subArr = Arrays.copyOfRange(numbers,form,numbers.length);
