@@ -3,7 +3,7 @@ import java.io.*;
 public class Exercise12 {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-        PrintWriter pw = new PrintWriter(new FileWriter("src/users.txt",false));
+        PrintWriter pw = new PrintWriter(new FileWriter("src/users.txt",true));
 
         System.out.println("Please enter your name: ");
         String name = input.nextLine();
@@ -14,7 +14,7 @@ public class Exercise12 {
         System.out.println("Please enter your age: ");
         int age = input.nextInt();
 
-        pw.printf("%s,%s,%d",name,address,age);
+        pw.printf("%s,%s,%d%n",name,address,age);
         pw.close();
 
         Scanner read = new Scanner(new File("src/users.txt"));
@@ -24,7 +24,7 @@ public class Exercise12 {
             name = inread.nextToken();
             address = inread.nextToken();
             age = Integer.parseInt(inread.nextToken());
-            System.out.printf("%s %s %d ",name,address,age);
+            System.out.printf("%s %s %d%n",name,address,age);
 
         }
 

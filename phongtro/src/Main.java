@@ -26,11 +26,11 @@ public class Main {
             int nuoc_cu = Integer.parseInt(dienNuocCu.nextToken());
 
             System.out.printf("P%d (%d/%d/%d)%n",i,getDate(localDate),getMonth(localDate),getYear(localDate));
-            System.out.printf("             ĐIỆN: %d - %d = %d x %.1f = %s,000%n",dien_moi,dien_cu,dien_moi-dien_cu,3.5,String.format("%,d,000",getMoneyElectricity(dien_moi,dien_cu)));
-            System.out.printf("             NƯỚC: %d - %d = %d x %d = %s,000%n", nuoc_moi, nuoc_cu,nuoc_moi-nuoc_cu,20,String.format("%,d,000",getMoneyWater(dien_moi,dien_cu)));
-            System.out.printf("             RÁC: %d%n",getMoneyGarbage());
-            System.out.printf("             TRỌ: %s%n",String.format("%,d,000",getRoomMoney(i)));
-            System.out.printf("             TỔNG: %s%n",String.format("%,d,000",getMoneyElectricity(dien_moi,dien_cu)+getMoneyWater(dien_moi,dien_cu)+getRoomMoney(i)+getMoneyGarbage()));
+            System.out.printf("     ĐIỆN: %d - %d = %d x %.1f = %s%n",dien_moi,dien_cu,dien_moi-dien_cu,3.5,String.format("%,d,000",getMoneyElectricity(dien_moi,dien_cu)));
+            System.out.printf("     NƯỚC: %d - %d = %d x %d = %s%n", nuoc_moi, nuoc_cu,nuoc_moi-nuoc_cu,25,String.format("%,d,000",getMoneyWater(nuoc_moi,nuoc_cu)));
+            System.out.printf("     RÁC: %d%n",getMoneyGarbage());
+            System.out.printf("     TRỌ: %s%n",String.format("%,d,000",getRoomMoney(i)));
+            System.out.printf("     TỔNG: %s%n",String.format("%,d,000",getMoneyElectricity(dien_moi,dien_cu)+getMoneyWater(nuoc_moi,nuoc_cu)+getRoomMoney(i)+getMoneyGarbage()));
             i++;
         }
         DienNuocCu.close();
@@ -55,7 +55,7 @@ public class Main {
     }
 
     static int getMoneyWater(int New, int Old){
-        return (New-Old)*20;
+        return (New-Old)*25;
     }
 
     static int getDate(LocalDate localDate){

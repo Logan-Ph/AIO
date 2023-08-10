@@ -3,7 +3,7 @@ import java.util.*;
 public class Exercise34 {
     public static void main(String[] args) throws IOException{
         Scanner input = new Scanner(System.in);
-        PrintWriter pw = new PrintWriter(new FileWriter("src/students.obj", false));
+        PrintWriter pw = new PrintWriter(new FileWriter("src/students.obj", true));
         System.out.println("Please enter student name: ");
         String name = input.nextLine();
 
