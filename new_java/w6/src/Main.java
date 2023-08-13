@@ -10,7 +10,7 @@ public class Main {
     }
     private static void getAllFiles(File curDir) {
         File[] filesList = curDir.listFiles();
-        for(File f : filesList){
+        for(File f : filesList != null ? filesList : new File[0]){
             if(f.isDirectory()) {
                 System.out.printf("<%s>%n", f.getName());
                 getAllFiles(f);
