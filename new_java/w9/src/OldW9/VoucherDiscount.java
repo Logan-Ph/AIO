@@ -1,3 +1,5 @@
+package OldW9;
+
 public class VoucherDiscount extends Discount{
     private String code;
     private double amount;

@@ -6,7 +6,7 @@ def caculate_distance(p1,p2):
 	dimension = len(p1)
 	distance = 0
 
-	for i in range dimension:
+	for i in range(dimension):
 		distance += (p1[i] - p2[i])**2
 
 	return math.sqrt(distance)
@@ -54,4 +54,4 @@ for p in x_test:
 	label = predict(x_train, y_train, p, k)
 	y_predict.append(label)
 
-accuracy_score(y_predict, y_test)
+print(accuracy_score(y_predict, y_test))

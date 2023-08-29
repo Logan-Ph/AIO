@@ -1,4 +1,4 @@
-import java.util.Random;
+package OldW9;
 
 public class PercentOffDiscount extends Discount{
     private String code;

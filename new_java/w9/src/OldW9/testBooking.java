@@ -1,3 +1,5 @@
+package OldW9;
+
 public class testBooking {
     public static void main(String[] args) {
         OtherBooking b = new OtherBooking();

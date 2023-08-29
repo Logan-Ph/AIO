@@ -1,3 +1,5 @@
+package OldW9;
+
 import java.util.ArrayList;
 
 public class WesternBooking extends Booking implements Taxable{

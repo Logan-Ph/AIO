@@ -1,3 +1,5 @@
+package OldW9;
+
 public class SpecialEventDiscount extends Discount{
     private String code;
     private int value;
