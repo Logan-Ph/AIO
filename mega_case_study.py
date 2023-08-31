@@ -58,7 +58,7 @@ frauds = sc.inverse_transform(frauds)
 customers = dataset.iloc[:,1:].values
 is_fraud = np.zeros(len(dataset))
 
-for i in range*(len(dataset)):
+for i in range(len(dataset)):
     if dataset.iloc[i,0].values in frauds:
         is_fraud[i] = 1
 

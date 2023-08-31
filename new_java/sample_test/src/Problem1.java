@@ -30,6 +30,7 @@ public class Problem1 {
     }
 
     public static void main(String[] args) {
+
         System.out.println(isFollowingRealRule(new double[]{0.0, 1.5, 4.5, 10.0}, new boolean[]{false, true, false, false}, 2.0));
         System.out.println(isFollowingRealRule(new double[]{0.0, 1.5, 1.9, 10.0}, new boolean[]{false, true, false, false}, 2.0));
         System.out.println(isFollowingRealRule(new double[]{0.0, 0.5, 1.0, 1.5, 2.1}, new boolean[]{false, true, true, true, false}, 2.0));
