@@ -9,7 +9,7 @@ public class WeatherData implements Subject {
     private float pressure;
 
     public WeatherData() {
-        this.observers = new ArrayList<Observer>();
+        this.observers = new ArrayList<>();
     }
 
     @Override
