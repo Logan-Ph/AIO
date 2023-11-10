@@ -1,0 +1,6 @@
+2234 is a palindrome .Plus or minus 0 to make it a palindrome.
+451 is not a palindrome
+9 is a palindrome .Plus or minus 0 to make it a palindrome.
+10 is a palindrome .Plus or minus 0 to make it a palindrome.
+12345 is not a palindrome
+9996 is a palindrome .Plus or minus 0 to make it a palindrome.

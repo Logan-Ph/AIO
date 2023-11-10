@@ -7,16 +7,12 @@ public class Exercise6 {
         Hashtable<Integer, Integer> ar = new Hashtable<>();
         boolean run = true;
 
-        String user = input.nextLine();
+        String user = "2017 2019 2018 2019 2019 2020 2018 2018 2019 2018 2018 2017 2018 2018 2019 2018 2021 2021 2021 2022 2019 2019 2016 2016 2021 2020 2022 2020 2020 2020 2020 2020 2020 2020 2017 2020 2021 2023 2019 2021 2021 2020 2020 2020 2018 2021 2023 2020 2016 2022 2020 2021 2019 2019 2023 2013 2018 2021 2016 2021";
         String[] userAr = user.split(" ");
         try {
             for (String i : userAr) {
                 int num = Integer.parseInt(i);
-                if (ar.get(num) == null) {
-                    ar.put(num, 1);
-                } else {
-                    ar.put(num, ar.get(num) + 1);
-                }
+                ar.merge(num, 1, Integer::sum);
             }
 
         } catch (Exception e) {
@@ -24,9 +20,7 @@ public class Exercise6 {
         }
 
         for(int i: ar.keySet()){
-            if (ar.get(i) == 1){
-                System.out.printf("%d ",i);
-            }
+            System.out.println(i + ": " + ar.get(i));
         }
     }
 }

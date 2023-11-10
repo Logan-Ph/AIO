@@ -45,7 +45,6 @@ class FaceRecognition:
         for image in os.listdir('faces'):
             face_image = face_recognition.load_image_file(f"faces/{image}")
             face_encoding = face_recognition.face_encodings(face_image)[0]
-
             self.known_face_encodings.append(face_encoding)
             self.known_face_names.append(image)
 
