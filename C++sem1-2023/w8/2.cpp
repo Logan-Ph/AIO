@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
+#include <algorithm>
 using namespace std;
 
 class Department;
@@ -66,3 +68,32 @@ bool Staff::leaveDepartment(Department *dep){
     }
 }
 
+int main(){
+    map<int,int> myMap;
+    for (int i =0; i<4; i++){
+        cout << "Enter a position: ";
+        int pos;
+        cin >> pos;
+        cin.ignore(1, '\n');
+        cout << "Enter a speed: ";
+        int speed;
+        cin >> speed;
+        cin.ignore(1, '\n');
+        myMap.insert({pos,speed});
+    }
+
+    for(auto iter = myMap.rbegin(); iter != myMap.rend(); ++iter){
+        cout << iter->first << " " << iter->second << endl;
+    }
+
+    // vector<int> stack;
+    // stack.push_back(3);
+    // stack.push_back(2);
+
+    // int t = stack.back();
+
+    // for(auto &el: stack){
+    //     cout << el << endl;
+    // }
+    // cout << t << endl;
+}

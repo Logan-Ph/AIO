@@ -1,3 +1,2 @@
-name = acc1, amount = 12
-name = acc2, amount = 23
-name = acc3, amount = 14
+Bank account[ name=Sang, amount=1000]
+Bank account[ name=Mary, amount=2000]

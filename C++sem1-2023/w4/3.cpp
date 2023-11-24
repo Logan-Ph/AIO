@@ -22,7 +22,9 @@ string convertString(string str){
 }
 
 int main(){
-    string str = "Good Morning";
+    string str;
+    cout << "Please enter a string: ";
+    getline(cin, str);
     cout << convertString(str) << endl;
     cout << reversedString(str) << endl;
 }
