@@ -62,6 +62,8 @@
         "xutility": "cpp",
         "vector": "cpp",
         "xstddef": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "numeric": "cpp",
+        "array": "cpp"
     }
 }
