@@ -1,23 +1,28 @@
-#include <iostream> 
+#include <iostream>
 #include <string>
 
 using namespace std;
 
-class Customer{
+class Customer
+{
 public:
     string name;
     int expenses;
     double bonus;
     Customer *next;
     Customer() = default;
-    Customer(string name, int expenses): name{name}, expenses{expenses}{};
-    friend ostream &operator<<(ostream &os, Customer *head){
-        while (head!=nullptr)
+    Customer(string name, int expenses) : name{name}, expenses{expenses} {};
+    friend ostream &operator<<(ostream &os, Customer *head)
+    {
+        while (head != nullptr)
         {
-            if (head->next != nullptr){
-                os << head->name << " (" << head->expenses << ")" << " -> " ;
+            if (head->next != nullptr)
+            {
+                os << head->name << " (" << head->expenses << ")"
+                   << " -> ";
             }
-            else{
+            else
+            {
                 os << head->name << " (" << head->expenses << ")";
             }
             head = head->next;
@@ -26,50 +31,51 @@ public:
     };
 };
 
-Customer *largestExpensesCustomer(Customer *head){
+Customer *largestExpensesCustomer(Customer *head)
+{
     Customer *temp = head;
     while (head)
     {
-        if (head->expenses>temp->expenses){
-            temp=head;
+        if (head->expenses > temp->expenses)
+        {
+            temp = head;
         }
 
         head = head->next;
     }
-    
+
     return temp;
 }
 
-void updateBonus(Customer *head){
+// O(n)
+void updateBonus(Customer *head)
+{
     Customer *ptr = head;
-    while (head)
+    double totalExpenses = 0;
+    while (ptr)
     {
-        Customer *temp = head->next;
-        while (temp)
-        {
-            if (head->next == temp){
-                head->bonus+=temp->expenses*0.05;
-            }else{
-                head->bonus+=temp->expenses*0.02;
-            }
-            temp = temp->next;
-        }
-        head = head->next;
-    };
-
-    cout << "All bonuses: ";
-    while (ptr->bonus !=0 && ptr)
-    {
-        cout << ptr->name << ": " << ptr->bonus << "  ";
+        totalExpenses += ptr->expenses;
         ptr = ptr->next;
-    };
+    }
+
+    Customer *temp = head;
+    totalExpenses -= temp->expenses;
+    std::cout << "All bonus: ";
+    while (temp && temp->next)
+    {
+        temp->bonus = (totalExpenses - temp->next->expenses)*0.02 + temp->next->expenses*0.05;
+        std::cout << temp->name << ": " << temp->bonus << " ";
+        totalExpenses -= temp->next->expenses;
+        temp = temp->next;
+    }
 }
 
-int main(){
-    Customer *cus1 = new Customer("Peter",1000);
-    Customer *cus2 = new Customer("John",200);
-    Customer *cus3 = new Customer("Harry",1200);
-    Customer *cus4 = new Customer("Luna",400);
+int main()
+{
+    Customer *cus1 = new Customer("Peter", 1000);
+    Customer *cus2 = new Customer("John", 200);
+    Customer *cus3 = new Customer("Harry", 1200);
+    Customer *cus4 = new Customer("Luna", 400);
 
     cus1->next = cus2;
     cus2->next = cus3;
@@ -81,4 +87,3 @@ int main(){
     cout << "Customer with the largest expense: " << temp->name << endl;
     updateBonus(cus1);
 }
-

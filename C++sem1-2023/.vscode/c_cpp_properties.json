@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/w4"
+                "${workspaceFolder}/w4",
+                "C:\\Users\\Admin\\boost_1_80_0\\boost_1_80_0"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,8 +14,8 @@
             ],
             "windowsSdkVersion": "10.0.22621.0",
             "compilerPath": "cl.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cStandard": "c23",
+            "cppStandard": "c++23",
             "intelliSenseMode": "windows-msvc-x64"
         }
     ],

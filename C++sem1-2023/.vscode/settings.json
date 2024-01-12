@@ -64,6 +64,6 @@
         "xstddef": "cpp",
         "list": "cpp",
         "numeric": "cpp",
-        "array": "cpp"
+        "array": "cpp",
     }
 }
