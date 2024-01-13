@@ -1,11 +1,21 @@
-#include <iomanip>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
-using namespace std;
-
-int main(){
-    cout << 100 << endl;
-    cout.setf(ios::hex,ios::basefield);
-    cout.setf(ios::showbase);
-    cout << 100 << endl;
+int main()
+{
+    std::ifstream myFile("a.txt");
+    std::string line;
+    while (std::getline(myFile, line))
+    {
+        std::stringstream ss(line);
+        std::string name;
+        std::string score1;
+        std::string score2;
+        std::getline(ss, name, ',');
+        std::getline(ss,score1,',');
+        std::getline(ss,score2,',');
+        std::cout << name << score1 << score2 <<std::endl;
+    }
+    myFile.close();
 }
